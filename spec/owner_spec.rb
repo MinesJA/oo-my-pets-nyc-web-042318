@@ -154,6 +154,9 @@ describe Owner do
       end
     end
 
+    # I think this test is messed up. Shouldn't the #pets method be drawing from the belongs to relationship each pet has with the owner?
+    # Right now the only indication there is a relationship is through the hash on the owner instance which violates the single source of truth rule
+
     describe "#list_pets" do
       it 'can list off its pets' do
         owner.buy_fish("Bubbles")
